@@ -1,5 +1,6 @@
 import Vertex from "./graphs/Vertex";
 import bfs  from './graphs/paths/Bfs'
+
 function initGraph() {
     const v1 = new Vertex('v1');
     const v2 = new Vertex('v2');
@@ -31,5 +32,6 @@ function initGraph() {
     // v5.addNeighbor(v2);
     // run dfs
     bfs(v1);
+    
 }
 initGraph();
