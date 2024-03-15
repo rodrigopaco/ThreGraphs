@@ -14,7 +14,6 @@ const bfs = (source) => {
                 //add to the line
                 vertexLine.push(vertex);
             }
-            
         });
     }
 }

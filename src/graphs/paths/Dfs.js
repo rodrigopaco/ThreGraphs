@@ -1,11 +1,9 @@
 // Homework, this presentation will be on fridays
 // in lab.
-HOMEWORK-EDWINCRUZJAITA
 const dfs = (source) => {
     const stack = [];
     source.setVisited(true);
     stack.push(source);
-
     while (stack.length !== 0) {
         const currentVertex = stack.pop();
         currentVertex.print();
@@ -18,14 +16,7 @@ const dfs = (source) => {
         });
     }
 };
-
-export default dfs;
-const dfs = () => {
-   
+const isEmpty = (vertexStack) => {
+    return vertexStack.length === 0;
 };
-
-
-
-
 export default dfs;
-master

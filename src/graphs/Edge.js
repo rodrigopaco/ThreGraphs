@@ -13,6 +13,7 @@ class Edge {
     getSource() {
         return this.source;
     }
+    
     getDestination() {
         return this.destination;
     }
