@@ -1,3 +1,4 @@
+import { VectorKeyframeTrack } from "three";
 // Homework, this presentation will be on fridays
 // in lab.
 const dfs = (source) => {
@@ -7,7 +8,6 @@ const dfs = (source) => {
     while (stack.length !== 0) {
         const currentVertex = stack.pop();
         currentVertex.print();
-
         currentVertex.getVertexList().forEach(vertex => {
             if (!vertex.getVisited()) {
                 vertex.setVisited(true);
