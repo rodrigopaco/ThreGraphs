@@ -13,3 +13,4 @@ class Edge extends THREE.Line {
         this.geometry.attributes.position.needsUpdate = true; // Necesario para actualizar la geometría
     }
 }
+export default Edge;

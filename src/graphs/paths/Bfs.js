@@ -1,13 +1,16 @@
-import { VectorKeyframeTrack } from "three";
-
-const bfs = (source) => {
+import delay from '../../shapes/utils/delay';
+const bfs = async(source) => {
     source.setVisited(true);
+    source.setColor(0x00ff00);
+    await delay();
     const vertexLine = [];
     vertexLine.push(source);
     while (!isEmpty(vertexLine)) {
         const firstVertex = vertexLine.pop();
         firstVertex.print();
-        firstVertex.getVertexList().forEach(vertex => {
+        firstVertex?.setColor(0x00ff00);
+        await delay();
+        firstVertex.getVertexList().forEach(async (vertex )=> {
             if (!vertex.getVisited()) {
                 //set the first vertex like a visited
                 vertex.setVisited(true);
