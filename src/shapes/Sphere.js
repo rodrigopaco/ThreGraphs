@@ -10,7 +10,7 @@ class Sphere extends THREE.Mesh {
         this.position.x = getPosition().x;
         this.position.y = getPosition().y;
         this.position.z = getPosition().z;
-        //this.createLabel(label);
+        this.createLabel(label);
     }
     setColor(color) {
         this.material.color.set(color);

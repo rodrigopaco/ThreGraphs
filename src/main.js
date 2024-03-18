@@ -2,12 +2,12 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { DragControls } from 'three/examples/jsm/controls/DragControls.js';
 import { initGraph } from './graph';
-import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
-// const labelRenderer = new CSS2DRenderer();
-// labelRenderer.setSize(window.innerWidth, window.innerHeight);
-// labelRenderer.domElement.style.position = 'absolute';
-// labelRenderer.domElement.style.top = '0px';
-// document.body.appendChild(labelRenderer.domElement);
+import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0px';
+document.body.appendChild(labelRenderer.domElement);
 const objects = [];
 // Crear la escena
 const scene = new THREE.Scene();
@@ -52,7 +52,7 @@ function animate() {
         edge.updatePosition();
     })
     renderer.render(scene, camera);
-    //labelRenderer.render(scene, camera);
+    labelRenderer.render(scene, camera);
     
 }
 animate();
