@@ -32,6 +32,6 @@ function initGraph() {
     // v5.addNeighbor(v2);
     // run dfs
     //bfs(v1);
-    dfs(v2)
+    dfs(v1)
 }
 initGraph();

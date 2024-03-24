@@ -1,18 +1,19 @@
 // Homework, this presentation will be on fridays
 // in lab.
 const dfs = (source) => {
-    const visited = new Set();
-    dfsHelper(source, visited);
+    dfsHelper(source);
 }
 
-const dfsHelper = (vertex, visited) => {
-    visited.add(vertex);
+const dfsHelper = (vertex) => {
+    if (vertex.visited) {
+        return;
+    }
+
+    vertex.visited = true;
     vertex.print(); 
 
     vertex.getVertexList().forEach(neighbour => {
-        if (!visited.has(neighbour)) {
-            dfsHelper(neighbour, visited);
-        }
+        dfsHelper(neighbour);
     });
 }
 
