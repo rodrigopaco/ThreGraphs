@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        canvas {
+    position: absolute;
+    z-index: 1; /* Asegúrate de que este valor sea mayor que el de cualquier otro elemento que pueda capturar los eventos del mouse */
+}
+.label {
+    color: white; /* Asegúrate de que el color contraste con el fondo */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 2px;
+}
+.labelRenderer {
+    position: absolute;
+    top: 0;
+    z-index: 4; /* Menor que el canvas para que no bloquee los eventos del mouse */
+}
+        </style>
 </head>
 <body>
-    <script type="module" src="./src/graph.js">
+    <script type="module" src="./src/main.js">
 
     </script>
 </body>
