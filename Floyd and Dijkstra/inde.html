@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Algorithms Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        svg {
+            border: 1px solid black;
+        }
+        .nodes circle {
+            fill: steelblue;
+            stroke: white;
+            stroke-width: 1.5px;
+        }
+        .links line {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        .texts text {
+            fill: black;
+            font: 10px sans-serif;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Graph Algorithms Visualization</h1>
+    <div>
+        <h2>Graph Visualization</h2>
+        <svg width="800" height="600"></svg>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
